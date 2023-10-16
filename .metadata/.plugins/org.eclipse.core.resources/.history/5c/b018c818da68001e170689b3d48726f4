@@ -1,0 +1,49 @@
+package Lab2;
+
+public class UniformCostSearchAlgo implements ISearchAlgo {
+	
+
+	@Override
+	public Node execute(Node root, String goal) {
+	
+			Queue<Node> frontier = new PriorityQueue<Node>(new NodeComparator());
+			Set<Node> explored = new HashSet<Node>();
+			frontier.offer(tree);
+
+			while (!frontier.isEmpty()) {
+				Node curr = frontier.poll();
+				explored.add(curr);
+
+				if (curr.getLabel().equals(goal))
+					return curr;
+
+				List<Edge> childrens = curr.getChildren();
+				Collections.sort(childrens);
+
+				for (Edge e : childrens) {
+					Node child = e.getEnd();
+
+					if (!explored.contains(child))
+						if (!frontier.contains(child)) {
+							child.setParent(curr);
+							child.setPathCost(curr.getPathCost() + e.getWeight());
+							frontier.offer(child);
+						} else {
+							double newPathCost = curr.getPathCost() + e.getWeight();
+							if (newPathCost < child.getPathCost()) {
+								child.setParent(curr);
+								child.setPathCost(newPathCost);
+							}
+						}
+				}
+			}
+			return null;
+	}
+
+	@Override
+	public Node execute(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

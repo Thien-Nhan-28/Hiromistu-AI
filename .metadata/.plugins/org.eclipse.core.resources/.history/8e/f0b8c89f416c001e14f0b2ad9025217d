@@ -109,5 +109,16 @@ public class UniformCostSearchAlgo implements ISearchAlgo {
 		return null;
 	}
 
+	@Override
+	public Node executeTreeSearch(Node root, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Node executeTreeSearch(Node root, String start, String goal) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 
 }

@@ -34,10 +34,12 @@ public class Test {
 		System.out.print("UCS: ");
 		NodeUtils.print(result3);
 		
-		System.out.println("LimitedDeepSeach");
+		
 		ISearchAlgo algo4 = new LimitedDeepSearchGraph();
 		Node result4 = algo4.execute(nodeS, "G",2);
-		System.out.println(NodeUtils.printPath(result4));
+		System.out.print(result4);
+		LimitedDeepSearchGraph limitedDeepSearchGraph = new LimitedDeepSearchGraph();
+		System.out.println(NodeUtils.printPath(limitedDeepSearchGraph.execute(nodeS, "G",2)));
 		System.out.println();
 	}
 }

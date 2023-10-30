@@ -35,7 +35,7 @@ public class Test {
 		NodeUtils.print(result3);
 		
 		System.out.println("LimitedDeepSeach");
-		ISearchAlgo algo4 = new LimitedDeepSearchGraph();
+		ISearchAlgo algo4 = new DeepLimitedSearchGraph();
 		Node result4 = algo4.execute(nodeS, "G",2);
 		System.out.println(NodeUtils.printPath(result4));
 		System.out.println();

@@ -1,0 +1,11 @@
+package Lab5;
+
+public class Greedy_Best_First_Search implements IPuzzleAlgo{
+
+	@Override
+	public Node execute(Puzzle model) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

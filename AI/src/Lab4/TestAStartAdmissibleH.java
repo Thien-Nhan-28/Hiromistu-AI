@@ -16,7 +16,7 @@ public class TestAStartAdmissibleH {
 
 		s.addEdge(b, 8);
 		s.addEdge(c, 19);
-		s.addEdge(k, 6);
+		s.addEdge(k, 6); 
 		a.addEdge(b, 8);
 		a.addEdge(d, 15);
 		b.addEdge(a, 7);
